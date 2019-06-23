@@ -2,6 +2,9 @@
 
 ## Iteration, Object, Arrays, Functions, Intro to Aysnchrounous behavior
 
+### Debugging node
+https://itnext.io/the-absolute-easiest-way-to-debug-node-js-with-vscode-2e02ef5b1bad
+
 ### io Module
 
 **Set the prompt text:** 
