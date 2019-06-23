@@ -1,6 +1,6 @@
 # WATS 3020 Skills 2
 
-## Object, Arrays, Functions
+## Iteration, Object, Arrays, Functions, Intro to Aysnchrounous behavior
 
 ### io Module
 
