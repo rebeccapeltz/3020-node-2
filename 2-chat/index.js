@@ -22,29 +22,24 @@ const questionKeys = [{
   },
   {
     "key": "color",
-    "question": "What is your favorite color?"
+    "question": "What is your favorite color"
   },
   {
     "key": "number",
-    "question": "What is is your favorite number?"
+    "question": "What is is your favorite number"
   }
 ]
 let userData = {} //initialize an object to capture the data
 let counter = 0 //initial counter 
 
 // ask first question
-io.terminal.setPrompt(questionKeys[counter]["question"]);
+io.terminal.setPrompt(`${questionKeys[counter]["question"]}? `);
 io.terminal.prompt();
 
 //gather answers
 io.terminal.on('line', function (response) {
-    console.log("line response", response)
-    console.log("questionKeys", questionKeys)
-    console.log("counter", counter)
     let currentQuestion = questionKeys[counter]
-
     let key = currentQuestion.key
-    console.log("line", key)
     userData[key] = response
 
     counter++
@@ -52,7 +47,7 @@ io.terminal.on('line', function (response) {
       io.terminal.close()
     } else {
       let nextQuestion = questionKeys[counter]
-      io.terminal.setPrompt(nextQuestion["question"]);
+      io.terminal.setPrompt(`${nextQuestion["question"]}? `);
       io.terminal.prompt();
     }
 

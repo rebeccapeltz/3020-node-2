@@ -26,13 +26,17 @@ io.terminal.on("line", function (response) {
   for (let character in charcount ){
     io.print (`${character} ${charcount[character]}`)
     charArr.push({char:character,count:charcount[character]})
-    charArr.sort(function(a,b){
-      if (a.count<b.count) return -1
-      else if (a.count>b.count) return 1
-      else return 0
-    })
-    console.table(charArr)
+    
   }
-  
+  charArr.sort(function(a,b){
+    if (a.count<b.count) return -1
+    else if (a.count>b.count) return 1
+    else return 0
+  })
+  // console.log("charArr", charArr)
+  io.print("Character count in ascending order:")
+  for (let row of charArr){
+    io.print (`${row.char} ${row.count}`)
+  }
 
 })
