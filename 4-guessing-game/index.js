@@ -3,6 +3,15 @@ n = 3
 let guessCount = 0
 const io = require("../modules/io/index")
 
+function getOrdinal(n){
+  if (n === 1){
+    return "first"
+  } else if (n===2){
+    return "second"
+  } else {
+    return "third"
+  }
+}
 
 //set the prompt message
 io.terminal.setPrompt('3 Guesses: Guess the number! (0-10): ');
@@ -22,7 +31,7 @@ io.terminal.on('line', function (response) {
       console.log(`You win!! - ${responseInt} is the number`);
       process.exit(0);
     } else {
-      io.print(`Your first guess ${responseInt} is incorrect`)
+      io.print(`Your ${getOrdinal(guessCount)} guess ${responseInt} is incorrect`)
     }
   }
   // say something if number is too big
