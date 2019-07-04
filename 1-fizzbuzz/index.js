@@ -1,11 +1,9 @@
-/**
- * Users enters a number
- * User tests all numbers between 1 and the number
- * entered and log the number and
- * fizz if divisable for 3
- * buzz if divisable by 5
- * fizzbuzz if divisable by 15
- */
+/*
+Description:
+Input:
+Output:
+Usage: 
+*/
 const getargs = require("../modules/getargs")
 
 // get the value to be evaluated
@@ -28,12 +26,3 @@ for (let i = 1; i <= input; i++) {
     console.log(`${i}`)
   }
 }
-
-
-
-
-
-
-
-
-//exit
